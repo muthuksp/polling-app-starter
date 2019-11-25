@@ -13,28 +13,35 @@ export class PageContainerComponent implements OnInit {
       title: 'Table Tennis',
       description: 'Table tennis is good for your health',
       voteCount: 0,
-      imageUrl:
-        'https://contents.mediadecathlon.com/p1328382/460x460/sq/ft_950_indoor_fftt-approved_club_table_tennis_table_-_blue_artengo_8279563_1328382.jpg?k=8c8bca02b0be76fae09518a19d3f308d'
+      imageUrl: 'assets/table-tennis.svg'
     },
     {
       id: 2,
       title: 'Sofa',
       description: 'Sofa for relaxation',
       voteCount: 0,
-      imageUrl:
-        'https://contents.mediadecathlon.com/p1328382/460x460/sq/ft_950_indoor_fftt-approved_club_table_tennis_table_-_blue_artengo_8279563_1328382.jpg?k=8c8bca02b0be76fae09518a19d3f308d'
+      imageUrl: 'assets/sofa.svg'
     },
     {
       id: 3,
       title: 'Library',
       description: 'Table tennis is good for your health',
       voteCount: 0,
-      imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/De_La_Salle_College_of_Saint_Benilde_Library.jpg/800px-De_La_Salle_College_of_Saint_Benilde_Library.jpg'
+      imageUrl: 'assets/library.svg'
     }
   ];
 
   constructor() {}
 
   ngOnInit() {}
+
+  get totalVotes() {
+    let total = 0;
+
+    this.pollItems.forEach(i => {
+      total += i.voteCount;
+    });
+
+    return total;
+  }
 }

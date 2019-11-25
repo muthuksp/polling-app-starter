@@ -1,10 +1,12 @@
 <div class="card" style="width: 18rem;">
-  <img src="{{ item.imageUrl }}" class="card-img-top" alt="..." />
+  <img src="{{ item.imageUrl }}" class="card-img-top" alt="..." height="200" />
   <div class="card-body">
-    <h5 class="card-title">{{ item.title }} {{ item.voteCount }}</h5>
+    <h5 class="card-title">{{ item.title }}</h5>
     <p class="card-text">
       {{ item.description }}
     </p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <button class="btn btn-primary" (click)="castVote()">
+      Vote <span class="badge badge-light">{{ item.voteCount }}</span>
+    </button>
   </div>
 </div>

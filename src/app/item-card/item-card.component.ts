@@ -12,4 +12,8 @@ export class ItemCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  castVote() {
+    this.item.voteCount++;
+  }
 }

@@ -1,4 +1,8 @@
-<div class="row">
+<div class="alert alert-primary mt-3" role="alert">
+  <h3>Total votes so far... {{ totalVotes }}</h3>
+</div>
+
+<div class="row mt-2">
   <div class="col" *ngFor="let item of pollItems">
     <app-item-card [item]="item"></app-item-card>
   </div>
