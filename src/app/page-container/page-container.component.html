@@ -1,1 +1,5 @@
-<p>page-container works!</p>
+<div class="row">
+  <div class="col" *ngFor="let item of pollItems">
+    <app-item-card [item]="item"></app-item-card>
+  </div>
+</div>
